@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoBuyer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: url('images/background.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+    }
+
+    .navbar-brand img {
+      height: 50px;
+    }
+
+    .carousel-item {
+      height: 80vh;
+      position: relative;
+    }
+
+    .carousel-item img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+      filter: brightness(0.4);
+    }
+
+    .carousel-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 30px;
+      border-radius: 10px;
+      color: #fff;
+      max-width: 700px;
+      width: 90%;
+    }
+
+    .carousel-caption h5 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .carousel-caption p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      background-color: #fff;
+    }
+
+    .contact-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, #1e90ff, #0073e6);
+      color: white;
+      padding: 14px 22px;
+      font-size: 16px;
+      border-radius: 50px;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .contact-button:hover {
+      transform: scale(1.1);
+    }
+
+    .social-icons {
+      position: fixed;
+      bottom: 80px;
+      right: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+      z-index: 999;
+    }
+
+    .social-icons.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .social-icons a img {
+      width: 36px;
+      height: 36px;
+      background-color: white;
+      border-radius: 50%;
+      padding: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s;
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+  background-color: #f8f9fa;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  z-index: 10;
+}
+    @media (max-width: 768px) {
+  .carousel-caption h5 {
+    font-size: 1.6rem;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/background.jpg" alt="AutoBuyer Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Haqqımızda</a></li>
+          <li class="nav-item"><a class="nav-link" href="elaqe.html">Əlaqə</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SLIDER -->
+  <div id="carouselExample" class="carousel slide mt-0" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" >
+        <img src="images/slider1.jpg" class="d-block w-100" alt="Slide 1">
+        <div class="carousel-caption">
+          <h5>Sizin Etibarlı Tərəfdaşınız</h5>
+          <p>Bütün xərcləri asanlıqla hesabla. Hər şeyi əvvəlcədən lizing və gömrük rəsmləşdirilməsi kalkulyatorları ilə qiymətləndir.</p>
+        </div>
+      </div>
+      <div class="carousel-item" >
+        <img src="images/slider2.jpg" class="d-block w-100" alt="Slide 2">
+        <div class="carousel-caption">
+          <h5>Peşəkar Daşıma Xidməti</h5>
+          <p>Avtomobillərinizin təhlükəsizliyi bizim üçün əsas prioritetdir.</p>
+        </div>
+      </div>
+      <div class="carousel-item" >
+        <img src="images/slider3.jpg" class="d-block w-100" alt="Slide 3">
+        <div class="carousel-caption">
+          <h5>Logistika Bizim İşimizdir</h5>
+          <p>Sürətli və etibarlı çatdırılma üçün bizə güvənin.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Əvvəlki</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Növbəti</span>
+    </button>
+  </div>
+
+  <!-- SERVICES SECTION -->
+  
+
+  <!-- CONTACT BUTTON AND SOCIAL ICONS -->
+  <div class="contact-button" onclick="toggleSocials()">Əlaqə</div>
+  
+  <footer>
+    <section class="container my-5">
+      <div class="text-center mb-4">
+        <h2>Xidmətlərimiz</h2>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <h5>Avtomobil Seçimi</h5>
+          <p>İstədiyiniz avtomobili ən yaxşı qiymətlərlə seçin.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Gömrük və Rəsmləşdirmə</h5>
+          <p>Bütün sənədləşmə işlərini sizin yerinizə görürük.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Çatdırılma</h5>
+          <p>Avtomobilinizi qapınıza qədər etibarlı şəkildə çatdırırıq.</p>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+  <p class="mb-0">&copy; 2025 AutoBuyer. Bütün hüquqlar qorunur.</p>
+</footer>
+<div class="social-icons" id="socialIcons">
+  <a href="https://wa.me/994507540004" target="_blank" title="WhatsApp">
+    <img width="48" height="48" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1"/>
+  </a>
+  <a href="https://www.instagram.com/autobuyer.az/?igsh=MTM1MW55enVhNm9tMQ%3D%3D#" target="_blank" title="Instagram">
+    <img width="64" height="64" src="https://img.icons8.com/cute-clipart/64/instagram-new.png" alt="instagram-new"/>
+  </a>
+  <a href="https://www.tiktok.com/@autobuyer.az?_t=ZN-8wEpvVaPc8s&_r=1" target="_blank" title="TikTok">
+    <img width="48" height="48" src="https://img.icons8.com/color/48/tiktok--v1.png" alt="tiktok--v1"/>
+  </a>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleSocials() {
+      document.getElementById("socialIcons").classList.toggle("show");
+    }
+//     const slides = document.querySelectorAll('.slide');
+// const dots = document.querySelectorAll('.dot');
+// let current = 0;
+
+// function showSlide(index) {
+//   slides.forEach((slide, i) => {
+//     slide.classList.remove('active');
+//     dots[i].classList.remove('active');
+//   });
+//   slides[index].classList.add('active');
+//   dots[index].classList.add('active');
+//   current = index;
+// }
+
+// function nextSlide() {
+//   current = (current + 1) % slides.length;
+//   showSlide(current);
+// }
+
+// setInterval(nextSlide, 1000);
+window.addEventListener('load', function () {
+    const carouselElement = document.querySelector('#carouselExample');
+    const carousel = new bootstrap.Carousel(carouselElement, {
+      interval: 3000,
+      ride: 'carousel',
+      pause: false, // Optional: ignore hover pauses
+      wrap: true     // Optional: loop to first slide
+    });
+  });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Əlaqə - AutoBuyer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+      background: url('images/background.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.8);
+      flex: 1;
+      padding-top: 100px;
+      padding-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .navbar {
+      background-color: #f8f9fa !important;
+  transition: background-color 0.3s ease;
+
+    }
+
+    .navbar-brand img {
+      height: 50px;
+    }
+
+    .nav-link {
+      color: rgba(0,0,0, 0.65) ;
+      
+  transition: color 0.3s ease;
+
+    }
+    .navbar .nav-link:hover {
+  color: #000;
+}
+    header {
+      text-align: center;
+      background-color: transparent;
+      color: #000;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+
+    section.content {
+      padding: 60px 20px;
+      color: #000;
+    }
+
+    .contact-item {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-item i {
+      margin-right: 8px;
+    }
+
+    footer {
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 20px 0;
+      color: #000;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  transition: background-color 0.3s ease;
+}
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/background.jpg" alt="AutoBuyer Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          
+          <li class="nav-item"><a class="nav-link" href="">Haqqımızda</a></li>
+          <li class="nav-item"><a class="nav-link active" href="elaqe.html">Əlaqə</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE WRAPPER -->
+  <div class="page-wrapper">
+    <div class="overlay">
+      <!-- HEADER -->
+      <header class="py-4">
+        <h1>Bizimlə Əlaqə</h1>
+        <p>Suallarınız üçün bizimlə rahatlıqla əlaqə saxlaya bilərsiniz.</p>
+      </header>
+
+      <!-- CONTENT -->
+      <section class="content container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-item"><i class="bi bi-telephone-fill"></i><strong>Telefon:</strong> <a href="https://wa.me/+994507540004" target="_blank">+994507540004</a></div>
+            <div class="contact-item"><i class="bi bi-instagram"></i><strong>Instagram:</strong> <a href="https://www.instagram.com/autobuyer.az/?igsh=MTM1MW55enVhNm9tMQ%3D%3D#" target="_blank">@autobuyer.az</a></div>
+            <div class="contact-item"><i class="bi bi-tiktok"></i><strong>TikTok:</strong> <a href="https://www.tiktok.com/@autobuyer.az?_t=ZN-8wEpvVaPc8s&_r=1" target="_blank">@autobuyer.az</a></div>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-item"><strong>Ünvan:</strong> 31, 38 Mirəli Seyidov küçəsi, Bakı 1000</div>
+            <iframe src="https://maps.google.com/maps?q=31,+38+Mirali+Seyidov,+Baku+1000&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p class="mb-0">&copy; 2025 AutoBuyer. Bütün hüquqlar qorunur.</p>
+    </footer>
+  </div>
+  <script>
+ window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
